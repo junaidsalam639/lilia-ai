@@ -1,9 +1,8 @@
-"use client"
-
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useRef, useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+
 
 const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
     const sectionRef = useRef(null)
@@ -142,7 +141,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
         if (!isAutoPlaying) {
             const timeout = setTimeout(() => {
                 setIsAutoPlaying(true)
-            }, 10000)
+            }, 10000) // Resume auto-playing after 10 seconds of inactivity
             return () => clearTimeout(timeout)
         }
     }, [isAutoPlaying, currentAdvisor])
@@ -243,10 +242,10 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                         ))}
                     </div>
 
-                    <div
-                        className="relative overflow-hidden rounded-xl bg-white min-h-[520px] md:min-h-[350px]"
+                    <div className="relative overflow-hidden rounded-xl bg-white h-[400px] md:h-[350px]
+                    md:p-16 p-4"
                         style={{
-                            boxShadow: "0 0 20px 6px #ff0000",
+                            boxShadow: '0 0 20px 6px #ff0000',
                         }}
                     >
                         <AnimatePresence initial={false} custom={direction} mode="wait">
@@ -261,9 +260,8 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                                     x: { type: "spring", stiffness: 300, damping: 30 },
                                     opacity: { duration: 0.5 },
                                 }}
-                                className="absolute inset-0 p-4 md:p-12 flex flex-col"
                             >
-                                <div className="flex-1 overflow-hidden">
+                                <div className="flex-1">
                                     <div className="flex items-center mb-6">
                                         <div className="w-12 h-12 flex items-center justify-center bg-red-600 text-white rounded-full mr-4">
                                             <svg
@@ -287,11 +285,10 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                                                 <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">
                                                     {advisors[currentAdvisor]?.specialty}
                                                 </span>
-                                                {advisors[currentAdvisor]?.experience && (
+                                                {advisors[currentAdvisor]?.experience &&
                                                     <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium">
                                                         {advisors[currentAdvisor]?.experience}
-                                                    </span>
-                                                )}
+                                                    </span>}
                                             </div>
                                         </div>
                                     </div>
@@ -317,9 +314,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                                             </svg>
                                         </div>
 
-                                        <div className="overflow-y-auto">
-                                            <p className="text-gray-600 pl-6 pr-2">{advisors[currentAdvisor].bio}</p>
-                                        </div>
+                                        <p className="text-gray-600 md:text-lg text-sm">{advisors[currentAdvisor].bio}</p>
                                     </div>
                                 </div>
 
@@ -330,7 +325,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                         </AnimatePresence>
 
                         <button
-                            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full md:flex items-center justify-center text-red-600 shadow-lg hover:bg-white transition-all z-10  hidden"
+                            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 rounded-full md:flex items-center justify-center text-red-600 shadow-lg hover:bg-white transition-all z-10 hidden"
                             onClick={handlePrev}
                             aria-label="Previous slide"
                         >
