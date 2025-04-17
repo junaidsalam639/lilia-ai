@@ -5,20 +5,20 @@ import { motion, useScroll, useTransform } from "framer-motion"
 const steps = [
   {
     number: "1",
-    title: "Ideation & Conceptualization",
-    description: "We start by understanding your vision and crafting a concept that aligns with your goals.",
+    title: "Upload",
+    description: "Upload your brain CT securely to our platform.",
     image: "/assets/step-one.avif",
   },
   {
     number: "2",
-    title: "Design & Development",
-    description: "Our expert team designs and develops your solution with cutting-edge technologies.",
+    title: "Process",
+    description: "Our AI analyzes the Brain CT using advanced algorithms.",
     image: "/assets/step-two.avif",
   },
   {
     number: "3",
-    title: "Super Charged Development",
-    description: "We accelerate the development process without compromising on quality or performance.",
+    title: "Results",
+    description: "Receive preliminary results and recommendations.",
     image: "/assets/step-three.avif",
   },
 ]
@@ -98,7 +98,7 @@ const StepsSection = () => {
                   <h3 className="text-2xl font-bold mb-4 text-gray-800">{step?.title}</h3>
                   <p className="text-gray-600">{step?.description}</p>
 
-                  <motion.button
+                  {/* <motion.button
                     className="mt-6 px-6 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-full font-medium inline-flex items-center"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
@@ -116,7 +116,7 @@ const StepsSection = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                  </motion.button>
+                  </motion.button> */}
                 </div>
 
                 <motion.div

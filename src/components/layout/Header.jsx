@@ -20,11 +20,11 @@ const Header = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          LILIA AI
+          Lilia AI
         </motion.div>
 
         <nav className="hidden md:flex space-x-8">
-          {["Home", "About", "Products", "Team", "Contact"].map((item, index) => (
+          {["Home", "Founders", "Contact"].map((item, index) => (
             <motion.a
               key={index}
               href={`#${item.toLowerCase()}`}
@@ -76,7 +76,7 @@ const Header = () => {
             transition={{ duration: 0.3 }}
           >
             <ul className="flex flex-col space-y-4 px-6 py-4">
-              {["Home", "About", "Products", "Team", "Contact"].map((item, index) => (
+              {["Home", "Founders", "Contact"].map((item, index) => (
                 <li key={index}>
                   <a
                     href={`#${item.toLowerCase()}`}

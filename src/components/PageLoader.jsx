@@ -103,7 +103,7 @@ const PageLoader = (props) => {
                 },
               }}
             >
-              <span className="text-3xl font-bold text-red-600">LILIA AI</span>
+              <span className="text-3xl font-bold text-red-600">Lilia AI</span>
             </motion.div>
           </motion.div>
 
@@ -117,7 +117,7 @@ const PageLoader = (props) => {
           </div>
 
           <motion.p
-            className="mt-4 text-gray-500 font-medium"
+            className="mt-4 text-white font-medium"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
