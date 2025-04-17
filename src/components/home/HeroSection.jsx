@@ -33,7 +33,7 @@ const HeroSection = () => {
       />
 
       <motion.div
-        className="container mx-auto px-4 text-center z-10 h-full flex flex-col justify-center overflow-y-auto max-h-screen py-12"
+        className="text-center z-10 h-full flex flex-col justify-center overflow-y-auto max-h-screen py-12"
         style={{ y }}
       >
         <motion.h1

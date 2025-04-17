@@ -69,7 +69,7 @@ const Header = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.nav
-            className="md:hidden absolute top-full left-0 w-full bg-white shadow-md"
+            className="md:hidden absolute top-full left-0 w-full bg-red-600 shadow-md"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -80,7 +80,7 @@ const Header = () => {
                 <li key={index}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-800 font-medium block"
+                    className="text-white font-medium block"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item}

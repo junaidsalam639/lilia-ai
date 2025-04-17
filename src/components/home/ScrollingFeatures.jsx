@@ -40,7 +40,7 @@ export default function ScrollingFeatures() {
                 Key Features
             </motion.h2>
 
-            <div className="relative overflow-hidden max-w-6xl mx-auto">
+            <div className="relative overflow-hidden w-full mx-auto">
                 <motion.div
                     ref={scrollRef}
                     className="flex gap-4"

@@ -86,13 +86,13 @@ const AdvisoryBoardSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
-                  className="relative aspect-[3/4] rounded-xl overflow-hidden"
+                  className="relative aspect-[3/4] max-h-[75vh] rounded-xl overflow-hidden w-full"
                   style={{
-                    boxShadow: '0 0 20px 6px #ff0000',
+                    boxShadow: "0 0 20px 6px #ff0000",
                   }}
                 >
                   <img
-                    src={advisors[activeIndex]?.image}
+                    src={advisors[activeIndex]?.image || "/placeholder.svg"}
                     alt={advisors[activeIndex]?.title}
                     className="w-full h-full object-cover"
                   />
