@@ -16,7 +16,7 @@ const CustomCursor = () => {
         overwrite: "auto",
         stagger: 0.02,
         boxShadow: "0 0 20px #ffffff",
-        backgroundColor: () => `#ffffff`,
+        backgroundColor: () => `red`,
       });
     });
     return () => {
