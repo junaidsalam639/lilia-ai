@@ -24,7 +24,7 @@ const IdeasSection = () => {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            Where ideas collide, creativity thrives, and <span className="text-red-600">breakthroughs</span> happen.
+            Where knowledge meets care, awareness grows, and <span className="text-red-600">breakthroughs</span> in brain aneurysm treatment begin.
           </motion.h2>
 
           <motion.div
@@ -64,9 +64,9 @@ const IdeasSection = () => {
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-2">Breakthrough Innovation</h3>
+            <h3 className="text-2xl font-bold mb-2">Breakthrough in Brain Aneurysm Care</h3>
             <p className="text-white/90">
-              Our platform enables creators to push boundaries and explore new possibilities.
+              Our platform empowers early detection, supports life-saving research, and raises awareness to prevent ruptures before they happen.
             </p>
           </motion.div>
         </motion.div>

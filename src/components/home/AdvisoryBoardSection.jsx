@@ -161,63 +161,65 @@ const AdvisoryBoardSection = () => {
                 </motion.div>
               </AnimatePresence>
 
-              <div className="mt-8 flex space-x-2">
-                {advisors.map((_, idx) => (
+              <div className="absolute bottom-28">
+                <div className="mt-8 flex space-x-2">
+                  {advisors.map((_, idx) => (
+                    <motion.button
+                      key={idx}
+                      className={`w-3 h-3 rounded-full ${idx === activeIndex ? "bg-red-600" : "bg-gray-300"}`}
+                      onClick={() => setActiveIndex(idx)}
+                      whileHover={{ scale: 1.5 }}
+                      whileTap={{ scale: 0.9 }}
+                      initial={{ opacity: 0, scale: 0 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.6 + idx * 0.1, duration: 0.3 }}
+                    />
+                  ))}
+                </div>
+
+                <div className="mt-8 flex space-x-4">
                   <motion.button
-                    key={idx}
-                    className={`w-3 h-3 rounded-full ${idx === activeIndex ? "bg-red-600" : "bg-gray-300"}`}
-                    onClick={() => setActiveIndex(idx)}
-                    whileHover={{ scale: 1.5 }}
+                    className="p-3 rounded-full bg-gray-100 text-gray-700 disabled:opacity-50"
+                    onClick={() => setActiveIndex((prev) => (prev === 0 ? advisors.length - 1 : prev - 1))}
+                    whileHover={{ scale: 1.1, backgroundColor: "#fee2e2" }}
                     whileTap={{ scale: 0.9 }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 0.6 + idx * 0.1, duration: 0.3 }}
-                  />
-                ))}
-              </div>
-
-              <div className="mt-8 flex space-x-4">
-                <motion.button
-                  className="p-3 rounded-full bg-gray-100 text-gray-700 disabled:opacity-50"
-                  onClick={() => setActiveIndex((prev) => (prev === 0 ? advisors.length - 1 : prev - 1))}
-                  whileHover={{ scale: 1.1, backgroundColor: "#fee2e2" }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
                   >
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </motion.button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </motion.button>
 
-                <motion.button
-                  className="p-3 rounded-full bg-gray-100 text-gray-700 disabled:opacity-50"
-                  onClick={() => setActiveIndex((prev) => (prev === advisors.length - 1 ? 0 : prev + 1))}
-                  whileHover={{ scale: 1.1, backgroundColor: "#fee2e2" }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                  <motion.button
+                    className="p-3 rounded-full bg-gray-100 text-gray-700 disabled:opacity-50"
+                    onClick={() => setActiveIndex((prev) => (prev === advisors.length - 1 ? 0 : prev + 1))}
+                    whileHover={{ scale: 1.1, backgroundColor: "#fee2e2" }}
+                    whileTap={{ scale: 0.9 }}
                   >
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
-                </motion.button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </motion.button>
+                </div>
               </div>
             </motion.div>
           </div>
