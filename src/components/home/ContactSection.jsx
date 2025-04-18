@@ -20,7 +20,7 @@ const ContactSection = () => {
     }
 
     return (
-        <section className="pb-20 relative overflow-hidden" id="contact">
+        <section className="md:py-20 py-10 relative overflow-hidden" id="contact">
             <motion.h2
                 className="text-4xl md:text-5xl text-center font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400"
                 initial={{ opacity: 0, y: 20 }}

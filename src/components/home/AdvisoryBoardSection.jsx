@@ -161,8 +161,8 @@ const AdvisoryBoardSection = () => {
                 </motion.div>
               </AnimatePresence>
 
-              <div className="absolute bottom-28">
-                <div className="mt-8 flex space-x-2">
+              <div className="absolute md:bottom-28 bottom-10">
+                <div className="mt-8 space-x-2 md:flex hidden">
                   {advisors.map((_, idx) => (
                     <motion.button
                       key={idx}
