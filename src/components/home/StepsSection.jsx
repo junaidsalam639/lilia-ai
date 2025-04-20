@@ -56,7 +56,7 @@ const StepsSection = () => {
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400"
+            className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#F0002A] to-red-400"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -64,7 +64,7 @@ const StepsSection = () => {
             Our Process
           </motion.h2>
           <motion.div
-            className="h-1 w-20 bg-gradient-to-r from-red-600 to-red-400 mx-auto mb-6"
+            className="h-1 w-20 bg-gradient-to-r from-[#F0002A] to-red-400 mx-auto mb-6"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -90,7 +90,7 @@ const StepsSection = () => {
               transition={{ duration: 0.6, delay: 0.2 * index }}
             >
               <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-xl p-6 md:p-8 overflow-hidden">
-                <div className="absolute -left-4 -top-4 md:w-24 md:h-24 w-12 h-12 flex items-center justify-center bg-gradient-to-br from-red-600 to-red-400 text-white text-3xl font-bold rounded-full shadow-lg">
+                <div className="absolute -left-4 -top-4 md:w-24 md:h-24 w-12 h-12 flex items-center justify-center bg-gradient-to-br from-[#F0002A] to-red-400 text-white text-3xl font-bold rounded-full shadow-lg">
                   {step?.number}
                 </div>
 
@@ -99,7 +99,7 @@ const StepsSection = () => {
                   <p className="text-gray-600">{step?.description}</p>
 
                   {/* <motion.button
-                    className="mt-6 px-6 py-2 bg-gradient-to-r from-red-600 to-red-400 text-white rounded-full font-medium inline-flex items-center"
+                    className="mt-6 px-6 py-2 bg-gradient-to-r from-[#F0002A] to-red-400 text-white rounded-full font-medium inline-flex items-center"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
                   >

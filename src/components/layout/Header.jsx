@@ -16,7 +16,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <motion.div
-          className="text-red-600 font-bold text-2xl"
+          className="text-[#F0002A] font-bold text-2xl"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -28,13 +28,13 @@ const Header = () => {
             <motion.a
               key={index}
               href={`#${item.toLowerCase()}`}
-              className="relative text-black font-medium"
+              className="relative text-[#333333] font-medium"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <span>{item}</span>
               <motion.div
-                className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600 origin-left"
+                className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F0002A] origin-left"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.3 }}
@@ -44,7 +44,7 @@ const Header = () => {
         </nav>
 
         <motion.div
-          className="md:hidden text-red-600 cursor-pointer"
+          className="md:hidden text-[#F0002A] cursor-pointer"
           whileTap={{ scale: 0.9 }}
           onClick={toggleMobileMenu}
         >
@@ -69,7 +69,7 @@ const Header = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.nav
-            className="md:hidden absolute top-full left-0 w-full bg-red-600 shadow-md"
+            className="md:hidden absolute top-full left-0 w-full bg-[#F0002A] shadow-md"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

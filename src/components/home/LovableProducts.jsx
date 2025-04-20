@@ -15,7 +15,7 @@ const products = [
   },
   {
     name: "AudioMix",
-    color: "from-red-600 to-orange-600",
+    color: "from-[#F0002A] to-orange-600",
     image: "/assets/image-three.svg",
   },
   {
@@ -74,7 +74,7 @@ const LovableProducts = () => {
           </motion.p>
 
           <motion.div
-            className="h-0.5 w-20 md:w-40 bg-red-600 mx-auto my-8"
+            className="h-0.5 w-20 md:w-40 bg-[#F0002A] mx-auto my-8"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: false }}
@@ -117,7 +117,7 @@ const LovableProducts = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.div
-            className="text-2xl font-bold text-red-600"
+            className="text-2xl font-bold text-[#F0002A]"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
           >

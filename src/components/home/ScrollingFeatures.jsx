@@ -32,7 +32,7 @@ export default function ScrollingFeatures() {
     return (
         <div className="overflow-hidden">
             <motion.h2
-                className="text-3xl font-bold text-center mb-8 text-red-600"
+                className="text-3xl font-bold text-center mb-8 text-[#F0002A]"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -58,7 +58,7 @@ export default function ScrollingFeatures() {
                     {duplicatedFeatures?.map((feature, index) => (
                         <motion.div
                             key={index}
-                            className="bg-red-600 p-4 min-w-[320px] md:h-24 h-20 rounded-xl shadow-sm flex justify-center items-center flex-shrink-0"
+                            className="bg-[#F0002A] p-4 min-w-[320px] md:h-24 h-20 rounded-xl shadow-sm flex justify-center items-center flex-shrink-0"
                         >
                             <h3 className="text-white font-semibold text-base text-center">{feature}</h3>
                         </motion.div>

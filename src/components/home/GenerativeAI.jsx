@@ -332,7 +332,7 @@ const GenerativeAI = () => {
         animate="animate"
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/3 w-40 h-40 rounded-full bg-red-600/10 blur-xl z-0"
+        className="absolute bottom-1/4 right-1/3 w-40 h-40 rounded-full bg-[#F0002A]/10 blur-xl z-0"
         variants={pulseVariants}
         animate="animate"
         transition={{ delay: 1 }}
@@ -398,7 +398,7 @@ const GenerativeAI = () => {
           </motion.p>
 
           <motion.div
-            className="h-0.5 w-20 md:w-40 bg-red-600 mx-auto my-8"
+            className="h-0.5 w-20 md:w-40 bg-[#F0002A] mx-auto my-8"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: false }}

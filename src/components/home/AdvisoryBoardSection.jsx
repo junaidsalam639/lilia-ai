@@ -16,7 +16,7 @@ const advisors = [
   },
   {
     title: "Abdul Durrani, MS - Chief Technology Officer",
-    image: "/assets/Durrani.png",
+    image: "/assets/founder/durrani.jpg",
     bio: [
       "Abdul has worked in the technology sector for over 10 years to include extensive experience software and cybersecurity.",
       "In addition to his extensive cybersecurity expertise, he has a strong background in artificial intelligence, with a focus on developing and researching machine learning models. Leveraging frameworks such as TensorFlow, he has worked extensively with Convolutional Neural Networks (CNNs), achieving groundbreaking results, including the development of a model that reached a predictive accuracy of 99.19%.",
@@ -44,7 +44,7 @@ const AdvisoryBoardSection = () => {
   const isInView = useInView(ref, { once: false, amount: 0.2 })
 
   return (
-    <section className="py-20 relative overflow-hidden" id="founders">
+    <section className="py-20 relative overflow-hidden bg-[#F5FAFA]" id="founders">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -54,7 +54,7 @@ const AdvisoryBoardSection = () => {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-4xl md:text-5xl text-center font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400"
+            className="text-4xl md:text-5xl text-center font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#F0002A] to-red-400"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -63,7 +63,7 @@ const AdvisoryBoardSection = () => {
             Founders
           </motion.h2>
           <motion.div
-            className="h-1 w-20 bg-red-600 mx-auto mt-4"
+            className="h-1 w-20 bg-[#F0002A] mx-auto mt-4"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: false }}
@@ -71,13 +71,13 @@ const AdvisoryBoardSection = () => {
           />
         </motion.div>
 
-        <div ref={ref} className="max-w-6xl mx-auto">
+        <div ref={ref} className="max-w-6xl mx-auto relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="relative md:px-10"
             >
               <AnimatePresence mode="wait">
                 <motion.div
@@ -86,7 +86,7 @@ const AdvisoryBoardSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
-                  className="relative aspect-[3/4] rounded-xl overflow-hidden"
+                  className="relative aspect-[3/4] rounded-xl overflow-hidden md:h-[70vh] w-full"
                   style={{
                     boxShadow: '0 0 20px 6px #ff0000',
                   }}
@@ -111,7 +111,7 @@ const AdvisoryBoardSection = () => {
               <motion.a
                 href={advisors[activeIndex]?.link}
                 target="_blank"
-                className="absolute -bottom-4 -right-4 w-24 h-24 bg-red-600 rounded-full flex items-center justify-center"
+                className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#F0002A] rounded-full flex items-center justify-center"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -146,7 +146,7 @@ const AdvisoryBoardSection = () => {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h3 className="text-2xl font-bold mb-10">{advisors[activeIndex].title}</h3>
+                  <h3 className="text-2xl font-bold mb-5">{advisors[activeIndex].title}</h3>
                   {advisors[activeIndex]?.bio?.map((paragraph, idx) => (
                     <motion.p
                       key={idx}
@@ -161,67 +161,47 @@ const AdvisoryBoardSection = () => {
                 </motion.div>
               </AnimatePresence>
 
-              <div className="absolute md:bottom-28 bottom-10">
-                <div className="mt-8 space-x-2 md:flex hidden">
-                  {advisors.map((_, idx) => (
-                    <motion.button
-                      key={idx}
-                      className={`w-3 h-3 rounded-full ${idx === activeIndex ? "bg-red-600" : "bg-gray-300"}`}
-                      onClick={() => setActiveIndex(idx)}
-                      whileHover={{ scale: 1.5 }}
-                      whileTap={{ scale: 0.9 }}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: 0.6 + idx * 0.1, duration: 0.3 }}
-                    />
-                  ))}
-                </div>
-
-                <div className="mt-8 flex space-x-4">
-                  <motion.button
-                    className="p-3 rounded-full bg-gray-100 text-gray-700 disabled:opacity-50"
-                    onClick={() => setActiveIndex((prev) => (prev === 0 ? advisors.length - 1 : prev - 1))}
-                    whileHover={{ scale: 1.1, backgroundColor: "#fee2e2" }}
-                    whileTap={{ scale: 0.9 }}
+              <div className="flex justify-center items-center md:mt-auto mt-10">
+                <motion.button
+                  className="md:absolute -left-10 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-[#F5FAFA] rounded-full flex items-center justify-center text-[#F0002A] shadow-lg hover:bg-white transition-all z-10"
+                  onClick={() => setActiveIndex((prev) => (prev === 0 ? advisors.length - 1 : prev - 1))}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                  </motion.button>
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </motion.button>
 
-                  <motion.button
-                    className="p-3 rounded-full bg-gray-100 text-gray-700 disabled:opacity-50"
-                    onClick={() => setActiveIndex((prev) => (prev === advisors.length - 1 ? 0 : prev + 1))}
-                    whileHover={{ scale: 1.1, backgroundColor: "#fee2e2" }}
-                    whileTap={{ scale: 0.9 }}
+                <motion.button
+                  className="md:absolute -right-10 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-[#F5FAFA] rounded-full flex items-center justify-center text-[#F0002A] shadow-lg hover:bg-white transition-all z-10"
+                  onClick={() => setActiveIndex((prev) => (prev === advisors.length - 1 ? 0 : prev + 1))}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M9 18l6-6-6-6" />
-                    </svg>
-                  </motion.button>
-                </div>
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </motion.button>
               </div>
             </motion.div>
+
           </div>
         </div>
       </div>

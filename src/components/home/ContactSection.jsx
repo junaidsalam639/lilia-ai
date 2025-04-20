@@ -20,9 +20,9 @@ const ContactSection = () => {
     }
 
     return (
-        <section className="md:py-20 py-10 relative overflow-hidden" id="contact">
+        <section className="md:py-20 py-10 relative overflow-hidden bg-[#F5FAFA]" id="contact">
             <motion.h2
-                className="text-4xl md:text-5xl text-center font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400"
+                className="text-4xl md:text-5xl text-center font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#F0002A] to-red-400"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ const ContactSection = () => {
                         viewport={{ once: false }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="bg-red-600 text-white p-8 rounded-xl relative">
+                        <div className="bg-[#F0002A] text-white p-8 rounded-xl relative">
                             <motion.h2
                                 className="text-3xl font-bold mb-6 relative z-10"
                                 initial={{ opacity: 0, y: 20 }}
@@ -120,7 +120,7 @@ const ContactSection = () => {
                                 <motion.a
                                     href="https://www.instagram.com/liliabiotechnology?utm_source=ig_web_button_share_sheet&amp;igsh=ZDNlZDc0MzIxNw=="
                                     target="_blank"
-                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-red-600"
+                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#F0002A]"
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -143,7 +143,7 @@ const ContactSection = () => {
                                 <motion.a
                                     href="https://www.facebook.com/profile.php?id=100093139035730"
                                     target="_blank"
-                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-red-600"
+                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#F0002A]"
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -164,7 +164,7 @@ const ContactSection = () => {
                                 <motion.a
                                     href="https://x.com/LiliaBiotech"
                                     target="_blank"
-                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-red-600"
+                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#F0002A]"
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -186,7 +186,7 @@ const ContactSection = () => {
                                 <motion.a
                                     href="https://www.linkedin.com/company/liliabiomed/"
                                     target="_blank"
-                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-red-600"
+                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-white hover:bg-white hover:text-[#F0002A]"
                                     whileHover={{ scale: 1.2 }}
                                     whileTap={{ scale: 0.9 }}
                                 >
@@ -214,7 +214,7 @@ const ContactSection = () => {
 
                     <motion.div
                         ref={formRef}
-                        className="lg:col-span-3 bg-white p-8 rounded-xl shadow-xl"
+                        className="lg:col-span-3 bg-[#F5FAFA] p-8 rounded-xl shadow-xl"
                         initial={{ opacity: 0, y: 50 }}
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8 }}
@@ -230,7 +230,7 @@ const ContactSection = () => {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                                     <input
                                         type="text"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                                        className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                         placeholder="John"
                                     />
                                 </motion.div>
@@ -244,7 +244,7 @@ const ContactSection = () => {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                                     <input
                                         type="text"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                                        className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                         placeholder="Doe"
                                     />
                                 </motion.div>
@@ -260,7 +260,7 @@ const ContactSection = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                                 <input
                                     type="email"
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                                    className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                     placeholder="john.doe@example.com"
                                 />
                             </motion.div>
@@ -275,14 +275,14 @@ const ContactSection = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                                 <textarea
                                     rows={5}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                                    className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                     placeholder="Your message here..."
                                 ></textarea>
                             </motion.div>
 
                             <motion.button
                                 type="submit"
-                                className="w-full bg-red-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors"
+                                className="w-full bg-[#F0002A] text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 custom={5}

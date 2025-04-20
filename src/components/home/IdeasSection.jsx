@@ -14,7 +14,7 @@ const IdeasSection = () => {
   const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8])
 
   return (
-    <section ref={ref} className="py-20 relative overflow-hidden">
+    <section ref={ref} className="py-20 relative overflow-hidden bg-[#F5FAFA]">
       <div className="container mx-auto px-4">
         <motion.div className="max-w-4xl mx-auto text-center mb-16" style={{ opacity, y, scale }}>
           <motion.h2
@@ -24,11 +24,11 @@ const IdeasSection = () => {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ duration: 0.6 }}
           >
-            Where knowledge meets care, awareness grows, and <span className="text-red-600">breakthroughs</span> in brain aneurysm treatment begin.
+            Where knowledge meets care, awareness grows, and <span className="text-[#F0002A]">breakthroughs</span> in brain aneurysm treatment begin.
           </motion.h2>
 
           <motion.div
-            className="h-0.5 w-20 md:w-40 bg-red-600 mx-auto my-8"
+            className="h-0.5 w-20 md:w-40 bg-[#F0002A] mx-auto my-8"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: false }}

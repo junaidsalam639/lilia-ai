@@ -48,7 +48,7 @@ const PageLoader = (props) => {
         {dots?.map((dot) => (
           <motion.div
             key={dot.id}
-            className="absolute rounded-full bg-red-600/10"
+            className="absolute rounded-full bg-[#F0002A]/10"
             style={{
               width: dot.size,
               height: dot.size,
@@ -87,7 +87,7 @@ const PageLoader = (props) => {
               },
             }}
           >
-            <div className="absolute inset-0 rounded-full border-t-4 border-red-600"></div>
+            <div className="absolute inset-0 rounded-full border-t-4 border-[#F0002A]"></div>
             <div className="absolute inset-0 rounded-full border-r-4 border-red-600/30"></div>
 
             <motion.div
@@ -103,13 +103,13 @@ const PageLoader = (props) => {
                 },
               }}
             >
-              <span className="text-3xl font-bold text-red-600">Lilia AI</span>
+              <span className="text-3xl font-bold text-[#F0002A]">Lilia AI</span>
             </motion.div>
           </motion.div>
 
           <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
             <motion.div
-              className="h-full bg-red-600 rounded-full"
+              className="h-full bg-[#F0002A] rounded-full"
               initial={{ width: 0 }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.2 }}

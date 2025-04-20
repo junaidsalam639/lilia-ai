@@ -48,7 +48,7 @@ const HeroSection = () => {
           }}
         >
           <span className="block">Transforming</span>
-          <span className="block mt-2 text-red-600">Brain Aneurysm Diagnosis</span>
+          <span className="block mt-2 text-[#F0002A]">Brain Aneurysm Diagnosis</span>
           <span className="block mt-2">with AI Precision</span>
         </motion.h1>
 

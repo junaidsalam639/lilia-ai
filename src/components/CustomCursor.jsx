@@ -16,7 +16,7 @@ const CustomCursor = () => {
         overwrite: "auto",
         stagger: 0.02,
         boxShadow: "0 0 20px #ffffff",
-        backgroundColor: () => `red`,
+        backgroundColor: () => `#F0002A`,
       });
     });
     return () => {
@@ -26,11 +26,11 @@ const CustomCursor = () => {
   return (
     <div>
       {" "}
-      <div className="ball z-50 bg-red-600 w-6 h-6 fixed top-0 left-0 rounded-full"></div>
-      <div className="ball z-50 bg-red-600 w-6 h-6 fixed top-0 left-0 rounded-full"></div>
-      <div className="ball z-50 bg-red-600 w-6 h-6 fixed top-0 left-0 rounded-full"></div>
-      <div className="ball z-50 bg-red-600 w-6 h-6 fixed top-0 left-0 rounded-full"></div>
-      <div className="ball z-50 bg-red-600 w-6 h-6 fixed top-0 left-0 rounded-full"></div>
+      <div className="ball z-50 bg-[#F0002A] w-6 h-6 fixed top-0 left-0 rounded-full"></div>
+      <div className="ball z-50 bg-[#F0002A] w-6 h-6 fixed top-0 left-0 rounded-full"></div>
+      <div className="ball z-50 bg-[#F0002A] w-6 h-6 fixed top-0 left-0 rounded-full"></div>
+      <div className="ball z-50 bg-[#F0002A] w-6 h-6 fixed top-0 left-0 rounded-full"></div>
+      <div className="ball z-50 bg-[#F0002A] w-6 h-6 fixed top-0 left-0 rounded-full"></div>
     </div>
   );
 };

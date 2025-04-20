@@ -49,7 +49,7 @@ function Home() {
         : (
           <>
             <motion.div
-              className="fixed top-0 left-0 right-0 h-1 bg-red-600 origin-left z-50"
+              className="fixed top-0 left-0 right-0 h-1 bg-[#F0002A] origin-left z-50"
               style={{ scaleX: scrollYProgress }}
             />
 

@@ -253,7 +253,7 @@ const MagicalNumbers = () => {
                 transition={{ duration: 0.5, delay: 0.1 * index }}
               >
                 <motion.div
-                  className="w-32 h-32 rounded-full bg-black/50 backdrop-blur-sm border-2 border-red-600 flex items-center justify-center mb-6 relative"
+                  className="w-32 h-32 rounded-full bg-black/50 backdrop-blur-sm border-2 border-[#F0002A] flex items-center justify-center mb-6 relative"
                   whileInView={{
                     boxShadow: [
                       "0 0 0 0 rgba(255, 0, 0, 0)",
@@ -332,7 +332,7 @@ const MagicalNumbers = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             {mainCount}
-            <span className="text-red-600">M+</span>
+            <span className="text-[#F0002A]">M+</span>
 
             <motion.div
               className="absolute -top-6 -right-6 w-12 h-12 text-yellow-500"

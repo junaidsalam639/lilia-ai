@@ -73,11 +73,11 @@ const ImmersiveSection = () => {
           >
             Immerse Yourself in the Art of Photo
             <br />
-            <span className="text-red-600">Editing and Generative AI</span>
+            <span className="text-[#F0002A]">Editing and Generative AI</span>
           </motion.h2>
 
           <motion.div
-            className="h-0.5 w-20 md:w-40 bg-red-600 mx-auto my-8"
+            className="h-0.5 w-20 md:w-40 bg-[#F0002A] mx-auto my-8"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: false }}
@@ -89,7 +89,7 @@ const ImmersiveSection = () => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className="bg-gradient-to-br from-red-600 to-red-800 rounded-2xl p-8 text-white shadow-xl"
+              className="bg-gradient-to-br from-[#F0002A] to-red-800 rounded-2xl p-8 text-white shadow-xl"
               initial={{ opacity: 0, x: index === 0 ? -50 : 50, y: 50 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: false }}
