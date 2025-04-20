@@ -5,7 +5,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion"
 const advisors = [
   {
     title: "Ali Haider - Chief Executive Officer",
-    image: "/assets/Ali-Haider.png",
+    image: "/assets/founder/ali_haider.jpg",
     bio: [
       "	Ali has over 10 years of healthcare experience to include time spent at MD Anderson Cancer Center and the University of Toronto.",
       "He is an internationally recognized, award-winning medical scientist with over 90 peer-reviewed scientific publications.",
@@ -27,7 +27,7 @@ const advisors = [
   },
   {
     title: "Adam Watts - President",
-    image: "/assets/Adam-new.jpg",
+    image: "/assets/founder/adam_watts.jpg",
     bio: [
       "Adam got his start in the United States Army where he began his service as a Medic for six years before commissioning as an Engineer Officer. During his military tenure, he served in multiple formal and informal leadership roles.",
       "Outside of the Army, he has worked extensively in supply chain and operational roles both domestically and internationally.",
