@@ -11,7 +11,6 @@ const HeroSection = () => {
   })
 
   const y = useTransform(scrollYProgress, [0, 1], [0, 200])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
     <motion.section
@@ -27,7 +26,6 @@ const HeroSection = () => {
           background: "radial-gradient(circle at center, rgba(255, 0, 0, 0.2), rgba(255, 255, 255, 0.8))",
           backgroundSize: "150% 150%",
           backgroundPosition: "center",
-          opacity,
           y,
         }}
       />

@@ -168,7 +168,16 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
         >
             <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
             <motion.div
-                className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 rounded-full -mr-32 -mt-32"
+                className="absolute inset-0 z-0"
+                style={{
+                    background: "radial-gradient(circle at center, rgba(255, 0, 0, 0.2), rgba(255, 255, 255, 0.8))",
+                    backgroundSize: "150% 150%",
+                    backgroundPosition: "center",
+                }}
+            />
+
+            <motion.div
+                className="absolute top-0 right-0 w-64 h-64 bg-red-500/20 rounded-full -mr-32 -mt-32"
                 animate={{
                     scale: [1, 1.1, 1],
                     rotate: [0, 10, 0],
@@ -181,7 +190,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
             />
 
             <motion.div
-                className="absolute bottom-0 left-0 w-96 h-96 bg-red-500/5 rounded-full -ml-48 -mb-48"
+                className="absolute bottom-0 left-0 w-96 h-96 bg-red-500/20 rounded-full -ml-48 -mb-48"
                 animate={{
                     scale: [1, 1.2, 1],
                     rotate: [0, -10, 0],
@@ -191,7 +200,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                     repeat: Number.POSITIVE_INFINITY,
                     repeatType: "reverse",
                 }}
-            />
+            /> 
 
             <div className="container mx-auto px-4 relative z-10">
                 <motion.div
