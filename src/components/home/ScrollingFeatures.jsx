@@ -51,7 +51,7 @@ export default function ScrollingFeatures() {
                     transition={{
                         repeat: Number.POSITIVE_INFINITY,
                         repeatType: "loop",
-                        duration: 20,
+                        duration: 40,
                         ease: "linear",
                     }}
                 >
