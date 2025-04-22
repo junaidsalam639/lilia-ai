@@ -251,8 +251,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                         ))}
                     </div>
 
-                    <div className="relative overflow-hidden rounded-xl bg-[#F5FAFA] h-[400px] md:h-[350px]
-                    md:p-16 p-4 flex justify-center items-center"
+                    <div className="relative overflow-hidden rounded-xl bg-[#F5FAFA] h-[400px] md:h-[350px] md:p-16 p-4 flex justify-center items-center"
                         style={{
                             boxShadow: '0 0 20px 6px #ff0000',
                         }}
