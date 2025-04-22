@@ -164,7 +164,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
     return (
         <section
             ref={sectionRef}
-            className="py-20 bg-gradient-to-b from-red-50 to-white relative overflow-hidden min-h-screen flex items-center"
+            className="py-20 relative overflow-hidden min-h-screen flex items-center"
         >
             <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
             <motion.div
