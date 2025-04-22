@@ -177,7 +177,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
             />
 
             <motion.div
-                className="absolute top-0 right-0 w-64 h-64 bg-red-500/20 rounded-full -mr-32 -mt-32"
+                className="absolute top-5 right-5 w-64 h-64 rounded-full bg-red-500/20"
                 animate={{
                     scale: [1, 1.1, 1],
                     rotate: [0, 10, 0],
@@ -190,7 +190,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
             />
 
             <motion.div
-                className="absolute bottom-0 left-0 w-96 h-96 bg-red-500/20 rounded-full -ml-48 -mb-48"
+                className="absolute bottom-10 left-5 w-80 h-80 bg-red-500/20 rounded-full"
                 animate={{
                     scale: [1, 1.2, 1],
                     rotate: [0, -10, 0],
