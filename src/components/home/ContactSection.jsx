@@ -62,9 +62,8 @@ const ContactSection = () => {
 
                             <div className="space-y-4 relative z-10">
                                 {[
-                                    { icon: "mail", text: "info@liliaai.com" },
-                                    { icon: "phone", text: "+1 (555) 123-4567" },
-                                    { icon: "map-pin", text: "Houston, Texas, USA" },
+                                    { icon: "mail", text: "info@lilia-ai.com" },
+                                    { icon: "map-pin", text: "Houston, Texas" },
                                 ].map((item, idx) => (
                                     <motion.div
                                         key={idx}
@@ -92,11 +91,6 @@ const ContactSection = () => {
                                                         <path d="M22 7l-10 7L2 7"></path>
                                                     </>
                                                 )}
-                                                {item.icon === "phone" && (
-                                                    <>
-                                                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
-                                                    </>
-                                                )}
                                                 {item.icon === "map-pin" && (
                                                     <>
                                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path>
@@ -105,7 +99,7 @@ const ContactSection = () => {
                                                 )}
                                             </svg>
                                         </div>
-                                        <span>{item.text}</span>
+                                        <a href={item?.icon === "mail" ? `mailto:${item.text}` : ""}>{item.text}</a>
                                     </motion.div>
                                 ))}
                             </div>
