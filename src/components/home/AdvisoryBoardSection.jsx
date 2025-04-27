@@ -7,9 +7,9 @@ const advisors = [
     title: "Ali Haider - Chief Executive Officer",
     image: "/assets/founder/ali_haider.jpg",
     bio: [
-      "	Ali has over 10 years of healthcare experience to include time spent at MD Anderson Cancer Center and the University of Toronto.",
-      "He is an internationally recognized, award-winning medical scientist with over 90 peer-reviewed scientific publications.",
-      "Ali is also pursuing dual graduate degrees to include a Masters in Business Administration at Rice University and a Masters in Computer Science at the University of Pennsylvania.",
+      "Ali is an internationally recognized, award-winning medical scientist with 2 national research fellowships and over 150 peer-reviewed scientific publications, national conference presentations, and textbook chapters. His research interests are focused on innovation in neurosurgical devices and cancer precision medicine.",
+      "His scientific work has been published in world-renowned medical research journals such as Nature Communications, Neuro-Oncology, Journal of Neuroimmunology, Journal of Neurosurgery, and Journal of Neuro-Oncology. Ali’s research has been cited and discussed at leading academic medical centers and has contributed to improving the standard of care for patients with neurological conditions throughout the world.",
+      "He has over 10 years of healthcare experience at the world’s leading medical institutions, including the University of Texas M.D. Anderson Cancer Center and the University of Toronto’s Hospital for Sick Children. Ali is pursuing dual graduate degrees, an MBA at the Rice University Jones Graduate School of Business and an MS in Computer Science at the University of Pennsylvania School of Engineering and Applied Science."
     ],
     shortName: "CEO",
     link: "https://www.linkedin.com/in/alishaider"

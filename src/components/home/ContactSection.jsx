@@ -1,10 +1,20 @@
 /* eslint-disable no-unused-vars */
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import emailjs from '@emailjs/browser';
+
 
 const ContactSection = () => {
-    const formRef = useRef(null)
-    const isInView = useInView(formRef, { once: false, amount: 0.3 })
+    const formRef = useRef(null);
+    const isInView = useInView(formRef, { once: false, amount: 0.3 });
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
 
     const inputVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -17,7 +27,50 @@ const ContactSection = () => {
                 ease: "easeOut",
             },
         }),
-    }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            await emailjs.send(
+                'service_6cobt4e',
+                'template_ayh69gy',
+                {
+                    to_email: 'junaidsalam639@gmail.com',
+                    from_name: `${formData.firstName} ${formData.lastName}`,
+                    from_email: formData.email,
+                    message: formData.message,
+                    first_name: formData.firstName,
+                    last_name: formData.lastName
+                },
+                'CMncn_cQSRcbjUfcf'
+            );
+
+            setSubmitStatus({ success: true, message: 'Message sent successfully!' });
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error('Error sending email:', error);
+            setSubmitStatus({ success: false, message: 'Failed to send message. Please try again.' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <section className="md:py-20 py-10 relative overflow-hidden bg-[#F5FAFA]" id="contact">
@@ -206,6 +259,7 @@ const ContactSection = () => {
                         </div>
                     </motion.div>
 
+
                     <motion.div
                         ref={formRef}
                         className="lg:col-span-3 bg-[#F5FAFA] p-8 rounded-xl shadow-xl"
@@ -213,7 +267,7 @@ const ContactSection = () => {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                 <motion.div
                                     custom={1}
@@ -224,8 +278,12 @@ const ContactSection = () => {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                                     <input
                                         type="text"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                         placeholder="John"
+                                        required
                                     />
                                 </motion.div>
 
@@ -238,8 +296,12 @@ const ContactSection = () => {
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
                                     <input
                                         type="text"
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleChange}
                                         className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                         placeholder="Doe"
+                                        required
                                     />
                                 </motion.div>
                             </div>
@@ -254,8 +316,12 @@ const ContactSection = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                     placeholder="john.doe@example.com"
+                                    required
                                 />
                             </motion.div>
 
@@ -269,29 +335,44 @@ const ContactSection = () => {
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                                 <textarea
                                     rows={5}
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     className="w-full px-4 py-3 border bg-[#F5FAFA] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F0002A] focus:border-transparent"
                                     placeholder="Your message here..."
+                                    required
                                 ></textarea>
                             </motion.div>
 
+                            {submitStatus && (
+                                <motion.div
+                                    className={`mb-4 p-3 rounded-lg ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                >
+                                    {submitStatus.message}
+                                </motion.div>
+                            )}
+
                             <motion.button
                                 type="submit"
-                                className="w-full bg-[#F0002A] text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors"
+                                className="w-full bg-[#F0002A] text-white py-3 px-6 rounded-lg font-medium hover:bg-red-700 transition-colors disabled:opacity-50"
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 custom={5}
                                 variants={inputVariants}
                                 initial="hidden"
                                 animate={isInView ? "visible" : "hidden"}
+                                disabled={isSubmitting}
                             >
-                                Send
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
                             </motion.button>
                         </form>
                     </motion.div>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default ContactSection
+export default ContactSection;
