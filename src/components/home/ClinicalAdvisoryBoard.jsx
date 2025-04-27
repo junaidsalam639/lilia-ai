@@ -3,8 +3,8 @@ import AdvisoryBoardSlider from "./AdvisoryBoardSlider";
 
 const advisors = [
     {
-        name: "Kennith Layton, MD, MBA",
-        bio: "Dr. Layton is a board-certified, nationally recognized interventional neuroradiologist with over 20 years of clinical experience. He is the Director of Interventional Neuroradiology and a past Chairman of the Department of Radiology at Baylor University Medical Center in Dallas. He received his medical degree from the University of Oklahoma, and then went on to complete his residency in diagnostic radiology at Baylor University Medical Center in Dallas and fellowship in interventional radiology at the Mayo Clinic in Rochester, Minnesota. ",
+        name: "Kennith Layton, MD, MS",
+        bio: "Dr. Layton is a board-certified, nationally recognized interventional neuroradiologist with over 20 years of clinical experience. He is the Director of Interventional Neuroradiology and a past Chairman of the Department of Radiology at Baylor University Medical Center in Dallas. He received his medical degree from the University of Oklahoma, and then went on to complete his residency in diagnostic radiology at Baylor University Medical Center in Dallas and fellowship in interventional radiology at the Mayo Clinic in Rochester, Minnesota. He also holds an MS in Healthcare Leadership and Management from the University of Texas at Dallas.",
         specialty: "Interventional Neuroradiology",
         experience: "20+ years",
     },
