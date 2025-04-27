@@ -235,7 +235,7 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                     </motion.p>
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto relative">
+                <div className="max-w-5xl mx-auto relative">
                     <div className="flex justify-center space-x-2 mb-8">
                         {advisors.map((_, index) => (
                             <button
@@ -251,7 +251,8 @@ const AdvisoryBoardSlider = ({ heading, text, advisors }) => {
                         ))}
                     </div>
 
-                    <div className="relative overflow-hidden rounded-xl bg-[#F5FAFA] h-[600px] md:h-[520px] md:p-12 p-4 flex justify-center items-center"
+                    <div className="relative overflow-hidden rounded-xl bg-[#F5FAFA] h-[600px] md:h-[500px] 
+                    md:px-16 :md:py-12 p-4 flex justify-center items-center"
                         style={{
                             boxShadow: '0 0 20px 6px #ff0000',
                         }}
