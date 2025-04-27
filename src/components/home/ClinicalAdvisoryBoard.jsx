@@ -10,7 +10,7 @@ const advisors = [
     },
     {
         name: "Waseem Wahood, MD, MS",
-        bio: "D. Wahood is an interventional radiology resident at the University of Miami. He has over 70 peer-reviewed scientific publications in leading neuroscience and radiology research journals. Dr. Wahood received his MD from Nova Southeastern University and his MS from Rosalind Franklin University.",
+        bio: "Dr. Wahood is an interventional radiology resident at the University of Miami. He has over 70 peer-reviewed scientific publications in leading neuroscience and radiology research journals. Dr. Wahood received his MD from Nova Southeastern University and his MS from Rosalind Franklin University.",
         specialty: "Interventional Radiology",
         experience: "",
     },
