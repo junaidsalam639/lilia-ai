@@ -29,14 +29,21 @@ const advisors = [
     title: "Adam Watts - President",
     image: "/assets/founder/adam_watts.jpg",
     bio: [
-      "Adam got his start in the United States Army where he began his service as a Medic for six years before commissioning as an Engineer Officer. During his military tenure, he served in multiple formal and informal leadership roles.",
-      "Outside of the Army, he has worked extensively in supply chain and operational roles both domestically and internationally.",
+      "Adam's first exposure to the medical community was in the United States Army where he began his service as a medic. His training consisted of emergency and trauma-related medical treatments, casualty triage, maintaining medical records, and training Soldiers on tactical combat casualty care. After serving as a medic for six years, he earned his commission and served as an engineer officer for another six years. During his military tenure, he served in multiple formal and informal leadership roles ranging from leading Soldiers in tactical operations to conducting long-range strategic planning at higher echelons.",
+      "Outside of the Army, Adam has worked extensively in supply chain and operational roles spanning both domestic and international landscapes. In these roles, he has consistently increased his scope of responsibilities and led transformative growth and operational improvement initiatives.",
       "Adam is currently pursuing his Masters in Business Administration at Rice University alongside his co-founders.",
     ],
     shortName: "President",
     link: "http://linkedin.com/in/adam-j-watts"
   },
 ]
+
+
+
+
+
+
+
 
 const AdvisoryBoardSection = () => {
   const [activeIndex, setActiveIndex] = useState(0)

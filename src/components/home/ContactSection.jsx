@@ -2,6 +2,15 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import emailjs from '@emailjs/browser';
+// Junaid Email template
+// serviceId : service_6cobt4e
+// templateId : template_ayh69gy
+// key : CMncn_cQSRcbjUfcf
+
+// Lilia Email template
+// serviceId : service_6cobt4e
+// templateId : template_ayh69gy
+// key : CMncn_cQSRcbjUfcf
 
 
 const ContactSection = () => {
