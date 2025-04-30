@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
+// import { form } from "framer-motion/client";
 // Junaid Email template
 // serviceId : service_6cobt4e
 // templateId : template_ayh69gy
@@ -24,6 +25,7 @@ const ContactSection = () => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const baseUrl = "http://localhost:8000";
 
     const inputVariants = {
         hidden: { y: 20, opacity: 0 },
@@ -52,27 +54,48 @@ const ContactSection = () => {
         setSubmitStatus(null);
 
         try {
-            await emailjs.send(
-                'service_6cobt4e',
-                'template_ayh69gy',
-                {
-                    to_email: 'junaidsalam639@gmail.com',
-                    from_name: `${formData.firstName} ${formData.lastName}`,
-                    from_email: formData.email,
-                    message: formData.message,
-                    first_name: formData.firstName,
-                    last_name: formData.lastName
-                },
-                'CMncn_cQSRcbjUfcf'
-            );
+            // await emailjs.send(
+            //     'service_6cobt4e',
+            //     'template_ayh69gy',
+            //     {
+            //         to_email: 'junaidsalam639@gmail.com',
+            //         from_name: `${formData.firstName} ${formData.lastName}`,
+            //         from_email: formData.email,
+            //         message: formData.message,
+            //         first_name: formData.firstName,
+            //         last_name: formData.lastName
+            //     },
+            //     'CMncn_cQSRcbjUfcf'
+            // );
 
-            setSubmitStatus({ success: true, message: 'Message sent successfully!' });
-            setFormData({
-                firstName: '',
-                lastName: '',
-                email: '',
-                message: ''
+
+            const dataSend = {
+                first_name: formData.firstName,
+                last_name: formData.lastName,
+                email: formData.email,
+                message: formData.message,
+            };
+
+
+            const res = await fetch(`${baseUrl}/email/sendEmail`, {
+                method: "POST",
+                body: JSON.stringify(dataSend),
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
             });
+
+            if (res.ok) {
+                setSubmitStatus({ success: true, message: 'Message sent successfully!' });
+                setFormData({
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    message: ''
+                });
+            }
+
         } catch (error) {
             console.error('Error sending email:', error);
             setSubmitStatus({ success: false, message: 'Failed to send message. Please try again.' });
@@ -385,3 +408,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
