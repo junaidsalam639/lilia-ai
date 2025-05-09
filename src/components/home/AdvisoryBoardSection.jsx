@@ -20,7 +20,7 @@ const advisors = [
     bio: [
       "Abdul has worked in the technology sector for over 10 years to include extensive experience software and cybersecurity.",
       "In addition to his extensive cybersecurity expertise, he has a strong background in artificial intelligence, with a focus on developing and researching machine learning models. Leveraging frameworks such as TensorFlow, he has worked extensively with Convolutional Neural Networks (CNNs), achieving groundbreaking results, including the development of a model that reached a predictive accuracy of 99.19%.",
-      "Abdul currently holds a Masters in Computer Science from the University of Dayton with a Graduate certificate in AI Image Autonomous Systems. He is currently pursuing his Masters in Business Administration at Rice University.",
+      "Abdul currently holds a Masters in Computer Science from the University of Dayton with a Graduate certificate in AI Image Autonomous Systems. He is currently pursuing his MBA at Rice University.",
     ],
     shortName: "CTO",
     link: "http://linkedin.com/in/abdul-muqtadir-durrani-860b33107"
@@ -31,7 +31,7 @@ const advisors = [
     bio: [
       "Adam's first exposure to the medical community was in the United States Army where he began his service as a medic. His training consisted of emergency and trauma-related medical treatments, casualty triage, maintaining medical records, and training Soldiers on tactical combat casualty care. After serving as a medic for six years, he earned his commission and served as an engineer officer for another six years. During his military tenure, he served in multiple formal and informal leadership roles ranging from leading Soldiers in tactical operations to conducting long-range strategic planning at higher echelons.",
       "Outside of the Army, Adam has worked extensively in supply chain and operational roles spanning both domestic and international landscapes. In these roles, he has consistently increased his scope of responsibilities and led transformative growth and operational improvement initiatives.",
-      "Adam is currently pursuing his Masters in Business Administration at Rice University alongside his co-founders.",
+      "Adam is currently pursuing his MBA at Rice University alongside his co-founders.",
     ],
     shortName: "President",
     link: "http://linkedin.com/in/adam-j-watts"
