@@ -26,4 +26,5 @@ A cutting-edge AI-powered solution for detecting brain aneurysms from cranial CT
 
 ### Installation
    npm install
+   
    npm run dev
